@@ -1,0 +1,5 @@
+# Global ~/.gitignore excludes .claude entirely.
+# Skills are part of this repo's content, so re-include just that subtree.
+!.claude/
+.claude/*
+!.claude/skills/
