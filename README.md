@@ -1,6 +1,10 @@
-# Python Interview Roadmap
+# Python Interview Prep
 
-Прогон через `/py-interview <тема>`. Отмечай `[x]` по мере прохождения.
+68 тем для подготовки к собесу на Python. Каждая тема = отдельный файл вопросов в `questions/`: база → средний уровень → задачи на код → 20 вопросов на сеньорность → бонус-киллер. Ответов в файлах нет.
+
+Вопросы генерирует скилл `.claude/skills/py-interview/` — `/py-interview <тема>` соберёт набор по любой теме, в т.ч. новой.
+
+Отмечай `[x]` по мере прохождения.
 
 ## I. Типы данных и модель объекта
 - [x] [`strings`](questions/01-strings.md) — immutability, PEP 393, interning, unicode, normalization
