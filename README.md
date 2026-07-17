@@ -1,6 +1,6 @@
 # Python Interview Prep
 
-68 тем для подготовки к собесу на Python. Каждая тема = отдельный файл вопросов в `questions/`: база → средний уровень → задачи на код → 20 вопросов на сеньорность → бонус-киллер. Ответов в файлах нет.
+68 тем + 11 тем «под капотом» для подготовки к собесу на Python. Каждая тема = отдельный файл вопросов в `questions/`: база → средний уровень → задачи на код → 20 вопросов на сеньорность → бонус-киллер. Ответов в файлах нет.
 
 Вопросы генерирует скилл `.claude/skills/py-interview/` — `/py-interview <тема>` соберёт набор по любой теме, в т.ч. новой.
 
@@ -93,6 +93,22 @@
 - [ ] [`security`](questions/66-security.md) — pickle RCE, injection, secrets vs random, timing attacks
 - [ ] [`data-structures-algorithms`](questions/67-data-structures-algorithms.md) — реализация на Python, реальная сложность
 - [ ] [`design-patterns-python`](questions/68-design-patterns-python.md) — почему GoF в Python другие, DI, композиция
+
+## XI. Под капотом (deep dive)
+
+Отдельный набор `questions/under-the-hood/` — CPython изнутри: C-структуры, аллокатор, байткод, eval loop, PEP-ы с ценой. Порядок изучения: 01 → 02 → 03 (фундамент), далее 04 → 05 → 06, потом остальное.
+
+- [ ] [`object-model`](questions/under-the-hood/01-object-model.md) — PyObject, ob_refcnt/ob_type, small int cache, interning, immortal objects (PEP 683)
+- [ ] [`memory-model`](questions/under-the-hood/02-memory-model.md) — refcount, generational GC, pymalloc arena/pool/block, freelists, weakref
+- [ ] [`bytecode-interpreter`](questions/under-the-hood/03-bytecode-interpreter.md) — AST→bytecode, ceval loop, opcodes, peephole, PEP 659 specializing interpreter
+- [ ] [`namespaces-scope`](questions/under-the-hood/04-namespaces-scope.md) — LEGB, cell objects, LOAD_DEREF, closures, name mangling, PEP 667
+- [ ] [`attributes-mro-descriptors`](questions/under-the-hood/05-attributes-mro-descriptors.md) — lookup order, C3, data vs non-data descriptors, метаклассы, PEP 487
+- [ ] [`data-model`](questions/under-the-hood/06-data-model.md) — dunder-протоколы, implicit special method lookup, `__hash__`/`__eq__` контракт, `__new__` vs `__init__`
+- [ ] [`functions-frames`](questions/under-the-hood/07-functions-frames.md) — function objects, argument binding, vectorcall (PEP 590), frame objects, mutable default
+- [ ] [`data-structures-internals`](questions/under-the-hood/08-data-structures-internals.md) — compact dict, perturbation, over-allocation, PEP 393, SipHash (PEP 456)
+- [ ] [`concurrency-gil`](questions/under-the-hood/09-concurrency-gil.md) — GIL защищает refcount, switchinterval, convoy, free-threaded PEP 703, subinterpreters PEP 684
+- [ ] [`import-system`](questions/under-the-hood/10-import-system.md) — sys.modules, meta_path finders, ModuleSpec, circular imports, PEP 420 namespace packages
+- [ ] [`generators-coroutines`](questions/under-the-hood/11-generators-coroutines.md) — gi_frame suspend/resume, yield from (PEP 380), native coroutines (PEP 492), async gen (PEP 525)
 
 ---
 
